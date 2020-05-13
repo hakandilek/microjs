@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
-      title: 'μjs1',
+      title: 'μjs',
       favicon: 'image/icon.png',
     }),
   ],
