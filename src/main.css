@@ -1,0 +1,18 @@
+body {
+  color: darkslategrey;
+  background-color: lightblue;
+}
+
+.code {
+  white-space: pre;
+}
+
+.result {
+  color: darkslategrey;
+  background-color: lightgreen;
+}
+
+.error {
+  color: red;
+  background-color: lightpink;
+}
