@@ -1,5 +1,7 @@
 # MicroJS
 
+A micro language inspired from [@maeyler](https://github.com/maeyler/)'s [microJ](https://github.com/maeyler/Automata-2016/tree/master/microJ)
+
 ## Development
 
 ### Required
