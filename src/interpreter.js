@@ -1,6 +1,6 @@
-import _ from 'lodash';
+import _ from 'lodash'
 import { tokenMatcher } from "chevrotain"
-import { mj1Parser as parser } from "./parser";
+import { mj1Parser as parser } from "./parser"
 import { Mult, Plus } from "./lexer"
 
 const BaseCstVisitor = parser.getBaseCstVisitorConstructor()

@@ -1,6 +1,6 @@
-import { mj1Lexer as lexer } from "./lexer";
-import { mj1Parser as parser } from "./parser";
-import { mj1Interpreter as interpreter } from "./interpreter";
+import { mj1Lexer as lexer } from "./lexer"
+import { mj1Parser as parser } from "./parser"
+import { mj1Interpreter as interpreter } from "./interpreter"
 
 export function parse(input) {
   const lex = lexer.tokenize(input)

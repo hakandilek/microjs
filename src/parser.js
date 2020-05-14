@@ -161,4 +161,4 @@ class Mj1Parser extends CstParser {
   }
 }
 
-export const mj1Parser = new Mj1Parser();
+export const mj1Parser = new Mj1Parser()

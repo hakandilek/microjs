@@ -49,4 +49,4 @@ export const vocabulary = [
   MultiplicationOp,
 ]
 
-export const mj1Lexer = new Lexer(vocabulary);
+export const mj1Lexer = new Lexer(vocabulary)
