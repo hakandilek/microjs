@@ -10,11 +10,16 @@ class Mj1Interpreter extends BaseCstVisitor {
   constructor() {
     super()
     this.validateVisitor()
+    this.reset()
+  }
+
+  reset() {
     this.frame = {}
     this.output = ''
   }
 
   program(ctx) {
+    this.reset()
     this.visit(ctx.method)
     console.log(this.output)
   }

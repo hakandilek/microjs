@@ -13,6 +13,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'μjs',
       favicon: 'image/icon.png',
+      template: 'src/index.html'
     }),
   ],
   output: {
@@ -27,6 +28,10 @@ module.exports = {
           'style-loader',
           'css-loader',
         ],
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
       },
     ],
   },

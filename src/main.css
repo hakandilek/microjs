@@ -8,6 +8,17 @@ body {
   font-family: monospace;
 }
 
+.editor {
+  background: url(../image/lines.png);
+  background-attachment: local;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  padding-top: 10px;
+  border-color: #ccc;
+  background-color: blanchedalmond;
+  font-size: 14px;
+}
+
 .info {
   color: darkslategrey;
   background-color: lightyellow;
