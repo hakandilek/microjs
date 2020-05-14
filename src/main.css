@@ -5,9 +5,15 @@ body {
 
 .code {
   white-space: pre;
+  font-family: monospace;
 }
 
-.result {
+.info {
+  color: darkslategrey;
+  background-color: lightyellow;
+}
+
+.success {
   color: darkslategrey;
   background-color: lightgreen;
 }

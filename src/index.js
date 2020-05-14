@@ -1,35 +1,41 @@
-import './main.css';
 import _ from 'lodash';
-import { mj1Lexer } from "./lexer";
+
+import './main.css';
+import { parse } from "./mj1";
 
 function evaluate(source) {
-  const prog = document.createElement('div');
-  const code = document.createElement('div');
-  const result = document.createElement('div');
+  const root = document.createElement('div');
+  const codeDiv = document.createElement('div');
+  const resultDiv = document.createElement('div');
+  const tokensDiv = document.createElement('div');
 
-  code.innerHTML = source;
-  code.classList.add('code');
+  codeDiv.innerHTML = source;
+  codeDiv.classList.add('code');
 
-  const lx = mj1Lexer.tokenize(source);
-  result.classList.add('code');
-  if (lx.errors.length > 0) {
-    result.classList.add('error');
-    result.innerHTML = _
-      .chain(lx.errors)
-      .map((e) => e.message)
+  const result = parse(source);
+  resultDiv.classList.add('code');
+  tokensDiv.classList.add('code', 'info');
+  if (result.errors.length > 0) {
+    resultDiv.classList.add('error');
+    resultDiv.innerHTML = _
+      .chain(result.errors)
+      .map((e) => `Line ${e.token.startLine}: ${e.message}`)
       .join('\n');
   } else {
-    result.classList.add('result');
-    result.innerHTML = _
-      .chain(lx.tokens)
+    resultDiv.classList.add('success');
+    resultDiv.innerHTML = result.value
+    tokensDiv.innerHTML = _
+      .chain(result.tokens)
       .map((tok) => `${tok.tokenType.name} ${tok.image}`)
       .join('\n');
   }
 
-  prog.appendChild(code);
-  prog.appendChild(document.createElement('hr'));
-  prog.appendChild(result);
-  return prog;
+  root.appendChild(codeDiv);
+  root.appendChild(document.createElement('hr'));
+  root.appendChild(resultDiv);
+  root.appendChild(document.createElement('hr'));
+  root.appendChild(tokensDiv);
+  return root;
 }
 
 function add(text) {
