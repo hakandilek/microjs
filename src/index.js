@@ -27,6 +27,7 @@ function evaluate(source) {
   }
 
   if (result.lexErrors.length > 0) {
+    resultView.innerHTML = ''
     tokenView.innerHTML = _
       .chain(result.lexErrors)
       .map((e) => `Line ${e.line}: ${e.message}`)
