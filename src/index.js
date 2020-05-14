@@ -24,6 +24,14 @@ function evaluate(source) {
     resultView.classList.remove('error');
     resultView.classList.add('success');
     resultView.innerHTML = result.value
+  }
+
+  if (result.lexErrors.length > 0) {
+    tokenView.innerHTML = _
+      .chain(result.lexErrors)
+      .map((e) => `Line ${e.line}: ${e.message}`)
+      .join('\n');
+  } else {
     tokenView.innerHTML = _
       .chain(result.tokens)
       .map((tok) => `${tok.tokenType.name} ${tok.image}`)
