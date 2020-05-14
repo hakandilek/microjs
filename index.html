@@ -1,1 +1,12 @@
-<!doctype html><html><head><meta charset="utf-8"><title>μjs</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="icon.png"></head><body><script src="main.js"></script></body></html>
+<!doctype html><html><head><meta charset="utf-8"><title>μjs</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="icon.png"></head><body><textarea id="code" class="code editor" rows="12" cols="60">
+test() {
+  var a, b, c;
+  println "Some expressions";
+  a = -40 / (-2 * 5);
+  print "a = ", a, " -1/a = ", -1 / a;
+  println " 2*a = ", 2 * a;
+  println "a = 2; b = 3; c = 5;";
+  a = 2; b = 3; c = 5;
+  print "b*8-(c-b)*7-(a*c-b)/(c/(a+b)) = ";
+  print b * 8 - (c - b) * 7 - (a * c - b) / (c / (a + b));
+}</textarea><hr><div id="result" class="code"></div><hr><div id="tokens" class="code info"></div><script src="main.js"></script></body><script src="main.js"></script></html>
